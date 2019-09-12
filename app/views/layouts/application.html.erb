@@ -13,25 +13,12 @@
 
   <body>
 
-    <body>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">かわぞえのブログ</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navigation">
-          <p class="navbar-text navbar-right">
-            <%= link_to '新規作成', new_article_path %>
-          </p>
-        </div>
-      </div>
-    </nav>
-  </body>
+    <%= render 'layouts/header' %>
+  
+  <!--新規登録やログイン時にメッセージを表示-->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>
